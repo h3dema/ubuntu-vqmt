@@ -24,6 +24,8 @@ RUN cd ~ && \
 RUN cd ~ && \
     git clone https://github.com/Rolinh/VQMT.git && \
     cd VQMT && \
-    make
+    make && \
+    mv build/bin/Release/vqmt /usr/bin/
 
-# see more info at http://mmspg.epfl.ch/vqmt
+# now you can run: vqmt OriginalVideo ProcessedVideo Height Width NumberOfFrames ChromaFormat Output Metrics
+# see more info at  http://mmspg.epfl.ch/vqmt  and  https://github.com/Rolinh/VQMT
