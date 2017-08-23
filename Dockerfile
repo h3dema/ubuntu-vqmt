@@ -9,21 +9,21 @@ RUN apt-get -y update && \
 # install OpenCV (requisite)
 # see http://docs.opencv.org/2.4/doc/tutorials/introduction/linux_install/linux_install.html
 
-RUN cd ~
-RUN git clone https://github.com/opencv/opencv.git
-RUN cd opencv
-RUN mkdir release
-RUN cd release
-RUN cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local ..
-RUN make
-RUN sudo make install
+RUN cd ~ && \
+    git clone https://github.com/opencv/opencv.git && \
+    cd opencv && \
+    mkdir release && \
+    cd release && \
+    cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local ..
+    make && \
+    sudo make install
 
-# install VQMT: Video Quality Measurement Tool
+# compile VQMT: Video Quality Measurement Tool
 # see https://github.com/Rolinh/VQMT
 
-RUN cd ~
-RUN git clone https://github.com/Rolinh/VQMT.git
-RUN cd VQMT
-RUN make
+RUN cd ~ && \
+    git clone https://github.com/Rolinh/VQMT.git && \
+    cd VQMT && \
+    make
 
 # see more info at http://mmspg.epfl.ch/vqmt
