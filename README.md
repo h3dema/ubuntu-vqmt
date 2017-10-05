@@ -40,7 +40,7 @@ Docker can map a physical directory to a virtual directory inside the container.
 To do this, you must provide the -v parameter.
 
 ```bash
-$ sudo docker run -v /tmp:/videos  -it vqmt
+$ sudo docker run -v /tmp:/videos -w /videos -it vqmt
 ```
 Move (or copy) the converted video files to the /tmp directory on the physical computer.
 In the container, you can run:
