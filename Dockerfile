@@ -9,6 +9,8 @@ RUN apt-get -y update && \
 # install OpenCV (requisite)
 # see http://docs.opencv.org/2.4/doc/tutorials/introduction/linux_install/linux_install.html
 
+
+# opencv on 31 Aug 2017
 RUN cd ~ && \
     git clone https://github.com/opencv/opencv.git && \
     cd opencv && \
