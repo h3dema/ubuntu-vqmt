@@ -12,6 +12,7 @@ RUN apt-get -y update && \
 RUN cd ~ && \
     git clone https://github.com/opencv/opencv.git && \
     cd opencv && \
+    git reset --hard 1114cbf671a1108badd1fee908437a829c2771f1 && \\
     mkdir release && \
     cd release && \
     cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local .. && \
@@ -24,7 +25,6 @@ RUN cd ~ && \
 RUN cd ~ && \
     git clone https://github.com/Rolinh/VQMT.git && \
     cd VQMT && \
-    git reset --hard 1114cbf671a1108badd1fee908437a829c2771f1 && \\
     make && \
     mv build/bin/Release/vqmt /usr/bin/
 
